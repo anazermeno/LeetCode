@@ -29,11 +29,16 @@ int main(){
     //Declaracion de variables
     int target = 9;
     vector<int> nums;
+    vector<int> resultado;
 
     nums.push_back(2);
     nums.push_back(7);
     nums.push_back(11);
     nums.push_back(15);
 
-    twoSum(nums,target);
+    resultado = twoSum(nums,target);
+
+    for(int i = 0; i < resultado.size(); i++){
+        cout << resultado[i] << " ";
+    }
 }
