@@ -7,17 +7,21 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
 vector<int> resul;
 
-    for(int i = 0; i < nums.size(); i++){
+    for(int i = 0; i < nums.size()-1; i++){
+        resul.clear();
         int prov = target - nums[i];
-        if(prov >= 0){
-            for(int j = 0; j <= nums.size() - 1 - i; j++){
-                if(nums[i] + nums [j] == target){
-                    resul.push_back(i);
+        resul.push_back(i);
+            for(int j = i+1; j < nums.size(); j++){
+                if(nums [j] == prov){
                     resul.push_back(j);
+                    break;
                 }
             }
-        }
+            if(resul.size() == 2){
+                break;
+            }
     }
+    return resul;
 }
 
 int main(){
