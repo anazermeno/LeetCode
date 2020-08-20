@@ -29,4 +29,5 @@ int main(){
     int temp = n1 + n2;
 
     //transformar resultado decimal a binario
+    
 }
