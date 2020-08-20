@@ -29,5 +29,8 @@ int main(){
     int temp = n1 + n2;
 
     //transformar resultado decimal a binario
+
     
+    //return string binario
+    string finalans = to_string(temp);
 }
