@@ -46,5 +46,5 @@ int main(){
     }
 
     cout << resfinal;
-    cout <<endl;
+    cout << endl;
 }
