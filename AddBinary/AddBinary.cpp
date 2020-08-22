@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <cmath>
+#include <queue>
 using namespace std;
 
 int main(){
@@ -29,8 +30,21 @@ int main(){
     int temp = n1 + n2;
 
     //transformar resultado decimal a binario
+    vector<char> prev;
 
-    
-    //return string binario
-    string finalans = to_string(temp);
+    while(temp > 0){
+        int digito = temp % 2;
+        prev.push_back(digito-'0');
+        temp = temp/2;
+    }
+  
+    int tam = prev.size();
+    string resfinal;
+
+    for(int i = 0; i < tam; i++){
+        resfinal.push_back(prev[i]);
+    }
+
+    cout << resfinal;
+    cout <<endl;
 }
