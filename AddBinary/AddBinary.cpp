@@ -45,6 +45,8 @@ int main(){
         resfinal.push_back(prev[i]);
     }
 
+    
+
     cout << resfinal;
     cout << endl;
 }
