@@ -1,5 +1,6 @@
  #include <iostream>
- #include <math.h>
+ #include <algorithm>
+ using namespace std;
 
  // Definition for a binary tree node.
   struct TreeNode {
