@@ -1,6 +1,6 @@
  #include <iostream>
  #include <math.h>
- 
+
  // Definition for a binary tree node.
   struct TreeNode {
       int val;
@@ -15,12 +15,12 @@ class Solution {
 public:
     int maxDepth(TreeNode* root) {
         
-        if(root == NULL)
-        { 
-            return 0; 
-        }
-
-            return(max(maxDepth(root->left), maxDepth(root->right))) + 1;
+        if(!root){return 0;}
+        
+        int left = maxDepth(root->left) + 1;
+        int right = maxDepth(root->right) + 1;
+        
+        return max(left,right);
         
     }
 };
